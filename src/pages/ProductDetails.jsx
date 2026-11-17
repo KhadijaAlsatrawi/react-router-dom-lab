@@ -21,13 +21,18 @@ function ProductDetails() {
             <h1>Product Details</h1>
             {product ?
                 <>
-                <h2>Title: {product.title}</h2>
-                <p>Description: {product.description}</p>
-                <p>Category: {product.category}</p>
-                <p>Price: {product.price}</p>
-                <p>Quantity: {product.quantity}</p>
+                    <h2>Title: {product.title}</h2>
+                    <p>Description: {product.description}</p>
+                    <p>Category: {product.category}</p>
+                    <p>Price: {product.price}</p>
+                    <p>Quantity: {product.quantity}</p>
                 </>
-                : <Spin />}
+                : <Spin styles={{
+                    indicator: {
+                        color: 'white',
+                        size: 'large'
+                    }
+                }} />}
         </div>
     )
 }
