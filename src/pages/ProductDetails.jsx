@@ -1,6 +1,7 @@
 import axios from "axios"
 import { useState, useEffect } from "react"
 import { useParams } from "react-router"
+import { Spin } from 'antd';
 
 function ProductDetails() {
     const [product, setProduct] = useState(null)
@@ -26,7 +27,7 @@ function ProductDetails() {
                 <p>Price: {product.price}</p>
                 <p>Quantity: {product.quantity}</p>
                 </>
-                : null}
+                : <Spin />}
         </div>
     )
 }
